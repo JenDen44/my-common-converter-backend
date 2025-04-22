@@ -1,6 +1,5 @@
 package com.bulish.melnikov.converter.service;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -12,7 +11,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Service
-@Slf4j
 public class FileServiceImpl implements FileService {
 
     private final String dirUpload = "temp/files/";

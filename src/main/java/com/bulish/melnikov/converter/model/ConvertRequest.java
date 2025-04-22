@@ -4,19 +4,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @Component
 @NoArgsConstructor
-public class ConvertResponse {
+public class ConvertRequest {
 
-    private String id;
+    private MultipartFile file;
 
-    private State state;
+    private String formatTo;
 
-    public ConvertResponse(String id, State state) {
-        this.id = id;
-        this.state = state;
-    }
+    private String formatFrom;
 }
