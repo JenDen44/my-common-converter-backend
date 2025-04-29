@@ -1,22 +1,16 @@
 package com.bulish.melnikov.converter.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.stereotype.Component;
 
-@Getter
-@Setter
+@Data
+@Builder
 @Component
 @NoArgsConstructor
+@AllArgsConstructor
 public class ConvertResponse {
 
     private String id;
 
     private State state;
-
-    public ConvertResponse(String id, State state) {
-        this.id = id;
-        this.state = state;
-    }
 }

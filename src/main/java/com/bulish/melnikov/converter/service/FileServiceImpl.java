@@ -1,5 +1,6 @@
 package com.bulish.melnikov.converter.service;
 
+import com.bulish.melnikov.converter.enums.FileType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -86,6 +87,19 @@ public class FileServiceImpl implements FileService {
             if (path != null && Files.exists(Paths.get(path))) {
                 Files.delete(Paths.get(path));
             }
+        }
+    }
+
+    @Override
+    public FileType getFileTypeByContent(MultipartFile file) {
+        String contentType = file.getContentType();
+
+        if (contentType.startsWith("audio/")) {
+            return FileType.AUDIO;
+        } else if (contentType.startsWith("video/")) {
+            return FileType.VIDEO;
+        } else {
+            return FileType.FILE;
         }
     }
 }

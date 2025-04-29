@@ -1,17 +1,15 @@
 package com.bulish.melnikov.converter.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.time.LocalDateTime;
 
-@Getter
-@Setter
+@Data
+@Builder
 @Component
 @NoArgsConstructor
+@AllArgsConstructor
 public class ConvertRequest {
 
     private MultipartFile file;

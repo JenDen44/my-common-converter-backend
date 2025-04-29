@@ -13,5 +13,5 @@ public abstract class Converter {
         this.format = format;
     }
 
-    public abstract byte[] convert(File file);
+    public abstract byte [] convert(byte [] file);
 }

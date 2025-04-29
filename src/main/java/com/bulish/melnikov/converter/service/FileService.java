@@ -1,5 +1,6 @@
 package com.bulish.melnikov.converter.service;
 
+import com.bulish.melnikov.converter.enums.FileType;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -21,4 +22,6 @@ public interface FileService {
      String saveFile(byte[] file, String formatTo, String fileName) throws IOException;
 
      void deleteFile(String... filePaths) throws IOException;
+
+     FileType getFileTypeByContent(MultipartFile file);
 }
