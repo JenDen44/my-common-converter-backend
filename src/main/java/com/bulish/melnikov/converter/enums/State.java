@@ -1,4 +1,4 @@
-package com.bulish.melnikov.converter.model;
+package com.bulish.melnikov.converter.enums;
 
 import lombok.Getter;
 
@@ -14,9 +14,5 @@ public enum State {
 
     State(String status) {
         this.status = status;
-    }
-
-    public String getStatus() {
-        return status;
     }
 }
