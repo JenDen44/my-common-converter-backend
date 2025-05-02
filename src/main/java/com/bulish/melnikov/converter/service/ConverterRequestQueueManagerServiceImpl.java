@@ -15,6 +15,7 @@ public class ConverterRequestQueueManagerServiceImpl implements ConverterRequest
     private final ConverterService converterService;
 
     private final ExecutorService executorService;
+
     private volatile boolean running = true;
 
     public ConverterRequestQueueManagerServiceImpl(ConverterService converterService) {
