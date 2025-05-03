@@ -2,12 +2,14 @@ package com.bulish.melnikov.converter.service;
 
 import com.bulish.melnikov.converter.model.ConvertRequestMsgDTO;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.*;
 
 @Service
 @Slf4j
+@ConditionalOnProperty(name = "queue.converter.enabled", havingValue = "true", matchIfMissing = false)
 public class ConverterRequestQueueManagerServiceImpl implements ConverterRequestQueueManagerService {
 
     private final BlockingQueue<ConvertRequestMsgDTO> taskQueue = new LinkedBlockingQueue<>();
