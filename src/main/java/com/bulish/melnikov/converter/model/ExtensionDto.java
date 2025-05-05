@@ -2,6 +2,7 @@ package com.bulish.melnikov.converter.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
 
@@ -11,6 +12,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @Component
+@NoArgsConstructor
 public class ExtensionDto {
 
     private String formatFrom;
@@ -18,7 +20,4 @@ public class ExtensionDto {
     private List<String> formatsTo;
 
     private Integer sizeLimit;
-
-    public ExtensionDto() {
-    }
 }
